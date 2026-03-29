@@ -19,10 +19,8 @@ def grade_collect(grades) -> list:
             continue
 
 def calculate(grade_collect, grades) -> list:
-    _count = 0
-    for grade in grades:
-        _count += grade
-    _avg = _count / len(grades)
+
+    _avg = sum(grades) / len(grades)
 
     _max = max(grades)
 
