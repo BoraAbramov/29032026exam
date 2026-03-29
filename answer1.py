@@ -1,5 +1,10 @@
 
 def grade_collect(grades) -> list:
+    """
+
+    :param grades: empty list
+    :return: a list of valid grades
+    """
     while True:
         try:
             _grade_in = int(input("Enter grade: "))
@@ -18,7 +23,12 @@ def grade_collect(grades) -> list:
             print("Invalid grade")
             continue
 
-def calculate(grade_collect, grades) -> list:
+def calculate(grades) -> list:
+    """
+
+    :param grades: list of grades
+    :return: return the average grade and max grade
+    """
 
     _avg = sum(grades) / len(grades)
 
@@ -30,7 +40,7 @@ def calculate(grade_collect, grades) -> list:
 grades = list()
 
 grade_collect(grades)
-_stat_fun = calculate(grade_collect, grades)
+_stat_fun = calculate(grades)
 print(_stat_fun)
 print(grades)
 
